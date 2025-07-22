@@ -9,11 +9,11 @@ function rotate(array, n) {
     return results;
   } else if (n < 0) {
     const x = n * -1;
-    results = array.slice(0, x);
+    results.push(array.slice(0, x));
     for (let i = array.length - 1; i >= x; i--) {
       results.unshift(array[i]);
     }
-    return results;
+    return results.flat(1); //depth =1, Optional
   } else {
     return array;
   }
