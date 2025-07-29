@@ -16,3 +16,25 @@ const theMapApplication = (getWords) => {
   return indexed;
 };
 console.log(theMapApplication(words));
+
+const stringReduction = (a, b) => {
+  a = a.split("");
+  b = b.split("");
+  for (const char of b) {
+    const index = a.indexOf(char);
+    if (index !== -1) {
+      a.splice(index, 1);
+    } else {
+      return 0;
+    }
+  }
+  return a.length;
+};
+
+console.log(stringReduction("xyz", "yxz")); // 0
+console.log(stringReduction("abcxyz", "ayxz")); // 2
+console.log(stringReduction("abcdexyz", "yxz")); // 5
+console.log(stringReduction("axyyz", "yxxz")); // 0
+console.log(stringReduction("abdegfg", "ffdb")); // 0
+console.log(stringReduction("aabcdefg", "fbd")); // 5
+console.log(stringReduction("aabcdefg", "fdb")); // 5
