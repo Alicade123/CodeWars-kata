@@ -1,34 +1,34 @@
 function salePrice(input) {
-  const lines = input.trim().split("\n");
+  return input
+    .trim()
+    .split("\n")
+    .map((line) => {
+      const match = line.match(/^(.+?) cost price: \$(\d+)$/);
+      if (!match) return "";
 
-  const output = lines.map((line) => {
-    const match = line.match(/^(.*) cost price: \$([0-9]+)/);
-    if (match) {
-      const name = match[1];
-      const price = parseInt(match[2], 10);
-      const sale = Math.trunc(price + (price * 15) / 100);
+      const name = match[1].trim();
+      const cost = parseInt(match[2], 10);
 
-      let lastDigit = sale % 10;
-      let finalPrice;
+      // Calculate with 15% profit and handle floating point precision
+      const withProfit = cost * 1.15;
+      let sale = Math.round(withProfit + 0.001); // Add small epsilon to handle floating point errors
 
-      if (lastDigit === 0 || lastDigit === 5) {
-        finalPrice = sale;
-      } else if (lastDigit < 5) {
-        finalPrice = sale - lastDigit;
-      } else {
-        finalPrice = sale + (10 - lastDigit);
+      // Force last digit to be 5 or 0 (always round UP)
+      const lastDigit = sale % 10;
+      if (lastDigit !== 0 && lastDigit !== 5) {
+        if (lastDigit <= 4) {
+          sale += 5 - lastDigit; // Round up to nearest 5
+        } else {
+          sale += 10 - lastDigit; // Round up to nearest 10
+        }
       }
 
-      return `${name} sale price: $${finalPrice}`;
-    }
-    return line;
-  });
-
-  return output.join("\n");
+      return `${name} sale price: $${sale}`;
+    })
+    .join("\n");
 }
 const input = `\
-iPhone 7 cost price: $800
+iPhone 7 cost price: $370
 Samsung note 7 cost price: $600
-iPad pro cost price: $700`;
-
+iPad pro cost price: $383`;
 console.log(salePrice(input));
