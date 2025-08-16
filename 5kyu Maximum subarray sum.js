@@ -16,4 +16,4 @@ var maxSequence = function (arr) {
       return accumulator + currentValue;
     }, arr[0]);
   }
-};
+}; 
