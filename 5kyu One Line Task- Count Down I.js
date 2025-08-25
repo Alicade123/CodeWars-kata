@@ -40,3 +40,6 @@ Object.defineProperty(myObj, "age", {
   writable: true,
 });
 console.log(myObj.age);
+
+const x = "kigali";
+console.log(x);
