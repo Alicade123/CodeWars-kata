@@ -15,6 +15,6 @@ function wordGenerator(str) {
   return results.length > 0 ? results : [str];
 }
 
-console.log(wordGenerator("Pszczyna")); //, ["pszczyna", "pszczyne", "pszczyni", "pszczyno", "pszczynu"], 'Not quite right!');
+console.log(wordGenerator("Pszczyna")); //, ["pszXXXczyna", "pszczyne", "pszczyni", "pszczyno", "pszczynu"], 'Not quite right!');
 console.log(wordGenerator("aa")); //,['aa', 'ae', 'ai', 'ao', 'au', 'ea', 'ee', 'ei', 'eo', 'eu', 'ia', 'ie', 'ii', 'io', 'iu', 'oa', 'oe', 'oi', 'oo', 'ou', 'ua', 'ue', 'ui', 'uo','uu'], 'Check if it works correctly with vowels');
 console.log(wordGenerator("b")); //,['b'], 'Check how function works without vowels');
