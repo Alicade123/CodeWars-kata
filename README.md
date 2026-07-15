@@ -47,14 +47,14 @@ Example:
 - [ ] 1kyu
       └── ...
 
-## 🏹Code running Prerequisites
+## Code running Prerequisites
 
 - **Node.js:** v16.0.0 or higher
 - **NPM:** v8.0.0 or higher
 - **Dependencies:** Run \`npm install\` to install necessary packages.
 `
 
-## 🛠️ How to Use
+## How to Use
 
 1. Clone the repo:
    ```bash
@@ -69,7 +69,7 @@ Example:
    node "8kyu Color Ghost.js"
    ```
 
-## 📖 Learning Goals
+## Learning Goals
 
 - Strengthen JavaScript fundamentals (arrays, strings, objects, recursion, etc.).
 - Practice clean, maintainable code with comments for clarity.
