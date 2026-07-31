@@ -1,4 +1,4 @@
-# JavaScript Kata Practice 🏗️
+# JavaScript Kata/codewars Practice 🏗️
 
 A personal factory of JavaScript kata solutions — every challenge I solve on [Codewars](https://www.codewars.com/) gets pushed here and this is my [Codewars_Account](https://www.codewars.com/users/Alicade).  
 This repository is my growing archive of problem-solving practice, showcasing different approaches, techniques, and clean coding habits in JavaScript.
@@ -12,7 +12,7 @@ This repository is my growing archive of problem-solving practice, showcasing di
 
 ---
 
-## 🦻🏿 Purpose
+## Purpose
 
 - Document my journey of mastering JavaScript through kata challenges.
 - Provide a reference for reusable patterns, algorithms, and problem-solving strategies.
@@ -28,7 +28,7 @@ Each kata solution is organized by:
 - **Challenge name** (matching Codewars titles)
 - **File format**: Plain JavaScript (`.js`) with clear function names and comments.
 
-Example:
+Examples:
 
 - [x] 8kyu
       └── Color Ghost.js
