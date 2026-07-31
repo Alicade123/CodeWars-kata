@@ -29,7 +29,7 @@ Each kata solution is organized by:
 - **File format**: Plain JavaScript (`.js`) with clear function names and comments.
 
 Examples:
-> Easiest
+> &darr; Easiest
 - [x] 8kyu
       └── Color Ghost.js
 - [x] 7kyu
@@ -46,7 +46,7 @@ Examples:
       └── ...
 - [ ] 1kyu
       └── ...
-> Hardest
+> &uarr; Hardest
 
 ## Code running Prerequisites
 
